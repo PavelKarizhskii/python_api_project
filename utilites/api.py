@@ -46,7 +46,7 @@ class Google_maps_api():
         print(get_url)
         result_get = Http_metods.get(get_url)
         print(result_get.text)
-        return resource_get
+        return result_get
 
     @staticmethod
     def update_place(place_id):

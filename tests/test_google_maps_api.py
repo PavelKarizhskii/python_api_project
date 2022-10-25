@@ -15,23 +15,31 @@ class Test_create_place():
         result_post = Google_maps_api.create_new_place()
         Check.check_status_code(result_post, 200)
         place_id = result_post.json().get("place_id")
+        Check.check_response_field(result_post, ['status', 'place_id', 'scope', 'reference', 'id'])
+
 
         print("\nMethod Get after Post")
         result_get = Google_maps_api.get_place(place_id)
-        # Check.check_status_code(result_get, 200)
+        Check.check_status_code(result_get, 200)
+        Check.check_response_field(result_get, ['location', 'accuracy', 'name', 'phone_number', 'address', 'types', 'website', 'language'])
 
         print("\nMethod Put")
         result_put = Google_maps_api.update_place(place_id)
         Check.check_status_code(result_put, 200)
+        Check.check_response_field(result_put, ['msg'])
 
         print("\nMethod Get after Put")
         result_get = Google_maps_api.get_place(place_id)
         Check.check_status_code(result_get, 200)
+        Check.check_response_field(result_get, ['location', 'accuracy', 'name', 'phone_number', 'address', 'types', 'website', 'language'])
 
         print("\nMethod Delete")
         result_delete = Google_maps_api.delete_place(place_id)
         Check.check_status_code(result_delete, 200)
+        Check.check_response_field(result_delete, ['status'])
+
 
         print("\nMethod Get after Delete")
         result_get = Google_maps_api.get_place(place_id)
-        Check.check_status_code(result_get, 200)
+        Check.check_status_code(result_get, 404)
+        Check.check_response_field(result_get, ['msg'])
