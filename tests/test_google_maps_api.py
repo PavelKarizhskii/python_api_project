@@ -16,30 +16,36 @@ class Test_create_place():
         Check.check_status_code(result_post, 200)
         place_id = result_post.json().get("place_id")
         Check.check_response_field(result_post, ['status', 'place_id', 'scope', 'reference', 'id'])
+        Check.check_value_field_response(result_post, "status", "OK")
 
 
         print("\nMethod Get after Post")
         result_get = Google_maps_api.get_place(place_id)
         Check.check_status_code(result_get, 200)
         Check.check_response_field(result_get, ['location', 'accuracy', 'name', 'phone_number', 'address', 'types', 'website', 'language'])
+        Check.check_value_field_response(result_get, "name", "Lenin monument")
 
         print("\nMethod Put")
         result_put = Google_maps_api.update_place(place_id)
         Check.check_status_code(result_put, 200)
         Check.check_response_field(result_put, ['msg'])
+        Check.check_value_field_response(result_put, "msg", "Address successfully updated")
 
         print("\nMethod Get after Put")
         result_get = Google_maps_api.get_place(place_id)
         Check.check_status_code(result_get, 200)
         Check.check_response_field(result_get, ['location', 'accuracy', 'name', 'phone_number', 'address', 'types', 'website', 'language'])
+        Check.check_value_field_response(result_get, "address", "Ploshchad Revolyutsii, Samara, Samara Oblast, Russia, 443099")
 
         print("\nMethod Delete")
         result_delete = Google_maps_api.delete_place(place_id)
         Check.check_status_code(result_delete, 200)
         Check.check_response_field(result_delete, ['status'])
+        Check.check_value_field_response(result_delete, "status", "OK")
 
 
         print("\nMethod Get after Delete")
         result_get = Google_maps_api.get_place(place_id)
         Check.check_status_code(result_get, 404)
         Check.check_response_field(result_get, ['msg'])
+        Check.check_value_field_response(result_get, "msg", "Get operation failed, looks like place_id  doesn't exists")
