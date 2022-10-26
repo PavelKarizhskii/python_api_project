@@ -49,3 +49,29 @@ class Test_create_place():
         Check.check_status_code(result_get, 404)
         Check.check_response_field(result_get, ['msg'])
         Check.check_value_field_response(result_get, "msg", "Get operation failed, looks like place_id  doesn't exists")
+
+
+
+    def test_negative_requests_google_place(self):
+
+        incorrect_place_id = 555
+
+        print("\nMethod Get")
+        result_get = Google_maps_api.get_place(incorrect_place_id)
+        Check.check_status_code(result_get, 404)
+        Check.check_response_field(result_get, ['msg'])
+        Check.check_value_field_response(result_get, "msg", "Get operation failed, looks like place_id  doesn't exists")
+
+        print("\nMethod Put")
+        result_put = Google_maps_api.update_place(incorrect_place_id)
+        Check.check_status_code(result_put, 404)
+        Check.check_response_field(result_put, ['msg'])
+        Check.check_value_field_response(result_put, "msg", "Update address operation failed, looks like the data doesn't exists")
+
+
+        print("\nMethod Delete")
+        result_delete = Google_maps_api.delete_place(incorrect_place_id)
+        Check.check_status_code(result_delete, 404)
+        Check.check_response_field(result_delete, ['msg'])
+        Check.check_value_field_response(result_delete, "msg", "Delete operation failed, looks like the data doesn't exists")
+
