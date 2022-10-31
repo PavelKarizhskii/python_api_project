@@ -1,5 +1,3 @@
-from requests import Response
-
 from utilites.api import Google_maps_api
 from utilites.checking import Check
 

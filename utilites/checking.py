@@ -29,5 +29,5 @@ class Check():
     def check_value_field_response(result_request, field_name, correct_value):
         """Метод проверки содержания указанного поля"""
         value_field = result_request.json().get(field_name)
-        print(colored(f"Correct value field {field_name}", 'yellow')) if value_field == correct_value else print(colored(f"Incorrect value field {field_name}", 'red'))
-        assert value_field == correct_value
+        print(colored(f"Correct value field {field_name}", 'yellow')) if str(value_field) == str(correct_value) else print(colored(f"Incorrect value field {field_name}", 'red'))
+        assert str(value_field) == str(correct_value)

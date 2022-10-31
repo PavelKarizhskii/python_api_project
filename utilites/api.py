@@ -82,3 +82,97 @@ class Google_maps_api():
         result_delete = Http_metods.delete(delete_url, json_delete_location)
         print(result_delete.text)
         return result_delete
+
+base_url = 'https://petstore.swagger.io/v2'
+user_name = 'Pavel_AutoQA'
+class Petstore_swagger():
+
+    @staticmethod
+    def create_new_pet(pet_name):
+
+        """Выполнение Post запроса, создание нового питомца"""
+
+        json = {
+          "id": 0,
+          "category": {
+            "id": 0,
+            "name": "Dogs"
+          },
+          "name": f"{pet_name}",
+          "photoUrls": [
+            "Null"
+          ],
+          "tags": [
+            {
+              "id": 0,
+              "name": "Dogs"
+            }
+          ],
+          "status": "available"
+        }
+
+        resource_post = '/pet'  #resourse post method
+        post_url = f"{base_url}{resource_post}"
+        print(json)
+        print(post_url)
+        result_post = Http_metods.post(post_url, json)
+        print(result_post.text)
+        return result_post
+
+    @staticmethod
+    def get_pet_information(pet_id):
+
+        """Выполнение  Get запроса,получение инфы о новом питомце"""
+
+        resource_get = '/pet/'  # resourse get method
+        get_url = f"{base_url}{resource_get}{pet_id}"
+        print(get_url)
+        result_get = Http_metods.get(get_url)
+        print(result_get.text)
+        return result_get
+
+    @staticmethod
+    def update_pet_information(pet_id, new_name_pet):
+
+        """Выполнение Put запроса, изменение информации о юзере"""
+
+        json_put = {
+          "id": pet_id,
+          "name": new_name_pet
+        }
+
+        resource_put = '/pet'  #resourse put method
+        put_url = f"{base_url}{resource_put}"
+        print(put_url)
+        result_put = Http_metods.put(put_url, json_put)
+        print(result_put.text)
+        return result_put
+
+    @staticmethod
+    def delete_pet(pet_id):
+
+        """Выполнение  Delete запроса, удаление питомца из базы"""
+
+        resource_delete = '/pet/'  # resourse get method
+        delete_url = f"{base_url}{resource_delete}{pet_id}"
+        print(delete_url)
+        result_delete = Http_metods.delete(delete_url, body="")
+        print(result_delete.text)
+        return result_delete
+
+
+    @staticmethod
+    def negative_create_new_pet():
+
+        """Выполнение Post запроса, создание нового питомца"""
+
+        json = {
+            "id": "98hjd923424343"
+        }
+
+        resource_post = '/pet'  #resourse post method
+        post_url = f"{base_url}{resource_post}"
+        print(post_url)
+        result_post = Http_metods.post(post_url, json)
+        print(result_post.text)
+        return result_post
