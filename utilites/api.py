@@ -3,8 +3,10 @@ from utilites.http_metod import Http_metods
 """Методы для тестирования Google maps api"""
 
 
-base_url = 'https://rahulshettyacademy.com'
+base_url_google = 'https://rahulshettyacademy.com'
 key = 'key=qaclick123'   #key
+base_url_petstore= 'https://petstore.swagger.io/v2'
+user_name = 'Pavel_AutoQA'
 
 class Google_maps_api():
 
@@ -30,7 +32,7 @@ class Google_maps_api():
         }
 
         resource_post = '/maps/api/place/add/json'  #resourse post method
-        post_url = f"{base_url}{resource_post}?{key}"
+        post_url = f"{base_url_google}{resource_post}?{key}"
         print(post_url)
         result_post = Http_metods.post(post_url, json_create_location)
         print(result_post.text)
@@ -42,7 +44,7 @@ class Google_maps_api():
         """Выполнение  Get запроса,получение инфы о новой локации"""
 
         resource_get = '/maps/api/place/get/json'  # resourse get method
-        get_url = f"{base_url}{resource_get}?{key}&place_id={place_id}"
+        get_url = f"{base_url_google}{resource_get}?{key}&place_id={place_id}"
         print(get_url)
         result_get = Http_metods.get(get_url)
         print(result_get.text)
@@ -60,7 +62,7 @@ class Google_maps_api():
         }
 
         resource_put = '/maps/api/place/update/json'  #resourse put method
-        put_url = f"{base_url}{resource_put}?{key}"
+        put_url = f"{base_url_google}{resource_put}?{key}"
         print(put_url)
         result_put = Http_metods.put(put_url, json_update_location)
         print(result_put.text)
@@ -73,7 +75,7 @@ class Google_maps_api():
         """Выполнение Delete запроса, удаление созданной локации"""
 
         resource_delete = '/maps/api/place/delete/json'  # resourse post method
-        delete_url = f"{base_url}{resource_delete}?{key}"
+        delete_url = f"{base_url_google}{resource_delete}?{key}"
         json_delete_location = {
             "place_id": place_id
         }
@@ -83,8 +85,7 @@ class Google_maps_api():
         print(result_delete.text)
         return result_delete
 
-base_url = 'https://petstore.swagger.io/v2'
-user_name = 'Pavel_AutoQA'
+
 class Petstore_swagger():
 
     @staticmethod
@@ -112,7 +113,7 @@ class Petstore_swagger():
         }
 
         resource_post = '/pet'  #resourse post method
-        post_url = f"{base_url}{resource_post}"
+        post_url = f"{base_url_petstore}{resource_post}"
         print(json)
         print(post_url)
         result_post = Http_metods.post(post_url, json)
@@ -125,7 +126,7 @@ class Petstore_swagger():
         """Выполнение  Get запроса,получение инфы о новом питомце"""
 
         resource_get = '/pet/'  # resourse get method
-        get_url = f"{base_url}{resource_get}{pet_id}"
+        get_url = f"{base_url_petstore}{resource_get}{pet_id}"
         print(get_url)
         result_get = Http_metods.get(get_url)
         print(result_get.text)
@@ -142,7 +143,7 @@ class Petstore_swagger():
         }
 
         resource_put = '/pet'  #resourse put method
-        put_url = f"{base_url}{resource_put}"
+        put_url = f"{base_url_petstore}{resource_put}"
         print(put_url)
         result_put = Http_metods.put(put_url, json_put)
         print(result_put.text)
@@ -154,7 +155,7 @@ class Petstore_swagger():
         """Выполнение  Delete запроса, удаление питомца из базы"""
 
         resource_delete = '/pet/'  # resourse get method
-        delete_url = f"{base_url}{resource_delete}{pet_id}"
+        delete_url = f"{base_url_petstore}{resource_delete}{pet_id}"
         print(delete_url)
         result_delete = Http_metods.delete(delete_url, body="")
         print(result_delete.text)
@@ -171,7 +172,7 @@ class Petstore_swagger():
         }
 
         resource_post = '/pet'  #resourse post method
-        post_url = f"{base_url}{resource_post}"
+        post_url = f"{base_url_petstore}{resource_post}"
         print(post_url)
         result_post = Http_metods.post(post_url, json)
         print(result_post.text)

@@ -1,0 +1,247 @@
+
+-----
+Test: tests/test_google_maps_api.py::Test_create_place_class::test_create_new_place (call)
+Time: 2022-11-09 12:42:51.895802
+Request method: POST
+Request URL: https://rahulshettyacademy.com/maps/api/place/add/json?key=qaclick123
+
+Response code: 200
+Response text: {"status":"OK","place_id":"6c4c9aaff28a7ac9817646b4d44b1755","scope":"APP","reference":"1a7e8c280dd9ca87d71322262bbf49af1a7e8c280dd9ca87d71322262bbf49af","id":"1a7e8c280dd9ca87d71322262bbf49af"}
+Response headers: {'Date': 'Wed, 09 Nov 2022 08:42:52 GMT', 'Server': 'Apache/2.4.41 (Ubuntu)', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'POST', 'Access-Control-Max-Age': '3600', 'Access-Control-Allow-Headers': 'Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With', 'Content-Length': '194', 'Keep-Alive': 'timeout=5, max=100', 'Connection': 'Keep-Alive', 'Content-Type': 'application/json;charset=UTF-8'}
+Response cookies: {}
+
+-----
+
+-----
+Test: tests/test_google_maps_api.py::Test_create_place_class::test_create_new_place (call)
+Time: 2022-11-09 12:42:52.845897
+Request method: GET
+Request URL: https://rahulshettyacademy.com/maps/api/place/get/json?key=qaclick123&place_id=6c4c9aaff28a7ac9817646b4d44b1755
+
+Response code: 200
+Response text: {"location":{"latitude":"53.155501","longitude":"48.474795"},"accuracy":"50","name":"Lenin monument","phone_number":"","address":"Sovetskaya Ulitsa, 96, Syzran, Samara Oblast, Russia, 446026","types":"shoe park,shop","website":"http:\/\/google.com","language":"French-IN"}
+Response headers: {'Date': 'Wed, 09 Nov 2022 08:42:53 GMT', 'Server': 'Apache/2.4.41 (Ubuntu)', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'POST', 'Access-Control-Max-Age': '3600', 'Access-Control-Allow-Headers': 'Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With', 'Content-Length': '272', 'Keep-Alive': 'timeout=5, max=100', 'Connection': 'Keep-Alive', 'Content-Type': 'application/json;charset=UTF-8'}
+Response cookies: {}
+
+-----
+
+-----
+Test: tests/test_google_maps_api.py::Test_create_place_class::test_create_new_place (call)
+Time: 2022-11-09 12:42:53.929402
+Request method: PUT
+Request URL: https://rahulshettyacademy.com/maps/api/place/update/json?key=qaclick123
+
+Response code: 200
+Response text: {"msg":"Address successfully updated"}
+Response headers: {'Date': 'Wed, 09 Nov 2022 08:42:54 GMT', 'Server': 'Apache/2.4.41 (Ubuntu)', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'POST', 'Access-Control-Max-Age': '3600', 'Access-Control-Allow-Headers': 'Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With', 'Content-Length': '38', 'Keep-Alive': 'timeout=5, max=100', 'Connection': 'Keep-Alive', 'Content-Type': 'application/json;charset=UTF-8'}
+Response cookies: {}
+
+-----
+
+-----
+Test: tests/test_google_maps_api.py::Test_create_place_class::test_create_new_place (call)
+Time: 2022-11-09 12:42:55.076027
+Request method: GET
+Request URL: https://rahulshettyacademy.com/maps/api/place/get/json?key=qaclick123&place_id=6c4c9aaff28a7ac9817646b4d44b1755
+
+Response code: 200
+Response text: {"location":{"latitude":"53.155501","longitude":"48.474795"},"accuracy":"50","name":"Lenin monument","phone_number":"","address":"Ploshchad Revolyutsii, Samara, Samara Oblast, Russia, 443099","types":"shoe park,shop","website":"http:\/\/google.com","language":"French-IN"}
+Response headers: {'Date': 'Wed, 09 Nov 2022 08:42:55 GMT', 'Server': 'Apache/2.4.41 (Ubuntu)', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'POST', 'Access-Control-Max-Age': '3600', 'Access-Control-Allow-Headers': 'Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With', 'Content-Length': '272', 'Keep-Alive': 'timeout=5, max=100', 'Connection': 'Keep-Alive', 'Content-Type': 'application/json;charset=UTF-8'}
+Response cookies: {}
+
+-----
+
+-----
+Test: tests/test_google_maps_api.py::Test_create_place_class::test_create_new_place (call)
+Time: 2022-11-09 12:42:55.904167
+Request method: DELETE
+Request URL: https://rahulshettyacademy.com/maps/api/place/delete/json?key=qaclick123
+
+Response code: 200
+Response text: {"status":"OK"}
+Response headers: {'Date': 'Wed, 09 Nov 2022 08:42:56 GMT', 'Server': 'Apache/2.4.41 (Ubuntu)', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'POST', 'Access-Control-Max-Age': '3600', 'Access-Control-Allow-Headers': 'Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With', 'Content-Length': '15', 'Keep-Alive': 'timeout=5, max=100', 'Connection': 'Keep-Alive', 'Content-Type': 'application/json;charset=UTF-8'}
+Response cookies: {}
+
+-----
+
+-----
+Test: tests/test_google_maps_api.py::Test_create_place_class::test_create_new_place (call)
+Time: 2022-11-09 12:42:56.920065
+Request method: GET
+Request URL: https://rahulshettyacademy.com/maps/api/place/get/json?key=qaclick123&place_id=6c4c9aaff28a7ac9817646b4d44b1755
+
+Response code: 404
+Response text: {"msg":"Get operation failed, looks like place_id  doesn't exists"}
+Response headers: {'Date': 'Wed, 09 Nov 2022 08:42:57 GMT', 'Server': 'Apache/2.4.41 (Ubuntu)', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'POST', 'Access-Control-Max-Age': '3600', 'Access-Control-Allow-Headers': 'Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With', 'Content-Length': '67', 'Keep-Alive': 'timeout=5, max=100', 'Connection': 'Keep-Alive', 'Content-Type': 'application/json;charset=UTF-8'}
+Response cookies: {}
+
+-----
+
+-----
+Test: tests/test_google_maps_api.py::Test_create_place_class::test_negative_requests_google_place (call)
+Time: 2022-11-09 12:42:57.725544
+Request method: GET
+Request URL: https://rahulshettyacademy.com/maps/api/place/get/json?key=qaclick123&place_id=555
+
+Response code: 404
+Response text: {"msg":"Get operation failed, looks like place_id  doesn't exists"}
+Response headers: {'Date': 'Wed, 09 Nov 2022 08:42:58 GMT', 'Server': 'Apache/2.4.41 (Ubuntu)', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'POST', 'Access-Control-Max-Age': '3600', 'Access-Control-Allow-Headers': 'Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With', 'Content-Length': '67', 'Keep-Alive': 'timeout=5, max=100', 'Connection': 'Keep-Alive', 'Content-Type': 'application/json;charset=UTF-8'}
+Response cookies: {}
+
+-----
+
+-----
+Test: tests/test_google_maps_api.py::Test_create_place_class::test_negative_requests_google_place (call)
+Time: 2022-11-09 12:42:58.522776
+Request method: PUT
+Request URL: https://rahulshettyacademy.com/maps/api/place/update/json?key=qaclick123
+
+Response code: 404
+Response text: {"msg":"Update address operation failed, looks like the data doesn't exists"}
+Response headers: {'Date': 'Wed, 09 Nov 2022 08:42:59 GMT', 'Server': 'Apache/2.4.41 (Ubuntu)', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'POST', 'Access-Control-Max-Age': '3600', 'Access-Control-Allow-Headers': 'Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With', 'Content-Length': '77', 'Keep-Alive': 'timeout=5, max=100', 'Connection': 'Keep-Alive', 'Content-Type': 'application/json;charset=UTF-8'}
+Response cookies: {}
+
+-----
+
+-----
+Test: tests/test_google_maps_api.py::Test_create_place_class::test_negative_requests_google_place (call)
+Time: 2022-11-09 12:42:59.583430
+Request method: DELETE
+Request URL: https://rahulshettyacademy.com/maps/api/place/delete/json?key=qaclick123
+
+Response code: 404
+Response text: {"msg":"Delete operation failed, looks like the data doesn't exists"}
+Response headers: {'Date': 'Wed, 09 Nov 2022 08:43:00 GMT', 'Server': 'Apache/2.4.41 (Ubuntu)', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'POST', 'Access-Control-Max-Age': '3600', 'Access-Control-Allow-Headers': 'Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With', 'Content-Length': '69', 'Keep-Alive': 'timeout=5, max=100', 'Connection': 'Keep-Alive', 'Content-Type': 'application/json;charset=UTF-8'}
+Response cookies: {}
+
+-----
+
+-----
+Test: tests/test_petstore_swagger.py::Test_petstore::test_create_pet_in_petstore (call)
+Time: 2022-11-09 12:43:00.608817
+Request method: POST
+Request URL: https://petstore.swagger.io/v2/pet
+
+Response code: 200
+Response text: {"id":9223372036854775807,"category":{"id":0,"name":"Dogs"},"name":"Bobick","photoUrls":["Null"],"tags":[{"id":0,"name":"Dogs"}],"status":"available"}
+Response headers: {'Date': 'Wed, 09 Nov 2022 08:43:01 GMT', 'Content-Type': 'application/json', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'GET, POST, DELETE, PUT', 'Access-Control-Allow-Headers': 'Content-Type, api_key, Authorization', 'Server': 'Jetty(9.2.9.v20150224)'}
+Response cookies: {}
+
+-----
+
+-----
+Test: tests/test_petstore_swagger.py::Test_petstore::test_create_pet_in_petstore (call)
+Time: 2022-11-09 12:43:01.388020
+Request method: GET
+Request URL: https://petstore.swagger.io/v2/pet/9223372036854775807
+
+Response code: 200
+Response text: {"id":9223372036854775807,"category":{"id":0,"name":"Dogs"},"name":"Bobick","photoUrls":["Null"],"tags":[{"id":0,"name":"Dogs"}],"status":"available"}
+Response headers: {'Date': 'Wed, 09 Nov 2022 08:43:02 GMT', 'Content-Type': 'application/json', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'GET, POST, DELETE, PUT', 'Access-Control-Allow-Headers': 'Content-Type, api_key, Authorization', 'Server': 'Jetty(9.2.9.v20150224)'}
+Response cookies: {}
+
+-----
+
+-----
+Test: tests/test_petstore_swagger.py::Test_petstore::test_create_pet_in_petstore (call)
+Time: 2022-11-09 12:43:02.056970
+Request method: PUT
+Request URL: https://petstore.swagger.io/v2/pet
+
+Response code: 200
+Response text: {"id":9223372036854775807,"name":"Great Bobster III","photoUrls":[],"tags":[]}
+Response headers: {'Date': 'Wed, 09 Nov 2022 08:43:02 GMT', 'Content-Type': 'application/json', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'GET, POST, DELETE, PUT', 'Access-Control-Allow-Headers': 'Content-Type, api_key, Authorization', 'Server': 'Jetty(9.2.9.v20150224)'}
+Response cookies: {}
+
+-----
+
+-----
+Test: tests/test_petstore_swagger.py::Test_petstore::test_create_pet_in_petstore (call)
+Time: 2022-11-09 12:43:02.793198
+Request method: GET
+Request URL: https://petstore.swagger.io/v2/pet/9223372036854775807
+
+Response code: 200
+Response text: {"id":9223372036854775807,"name":"Great Bobster III","photoUrls":[],"tags":[]}
+Response headers: {'Date': 'Wed, 09 Nov 2022 08:43:03 GMT', 'Content-Type': 'application/json', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'GET, POST, DELETE, PUT', 'Access-Control-Allow-Headers': 'Content-Type, api_key, Authorization', 'Server': 'Jetty(9.2.9.v20150224)'}
+Response cookies: {}
+
+-----
+
+-----
+Test: tests/test_petstore_swagger.py::Test_petstore::test_create_pet_in_petstore (call)
+Time: 2022-11-09 12:43:03.505038
+Request method: DELETE
+Request URL: https://petstore.swagger.io/v2/pet/9223372036854775807
+
+Response code: 200
+Response text: {"code":200,"type":"unknown","message":"9223372036854775807"}
+Response headers: {'Date': 'Wed, 09 Nov 2022 08:43:04 GMT', 'Content-Type': 'application/json', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'GET, POST, DELETE, PUT', 'Access-Control-Allow-Headers': 'Content-Type, api_key, Authorization', 'Server': 'Jetty(9.2.9.v20150224)'}
+Response cookies: {}
+
+-----
+
+-----
+Test: tests/test_petstore_swagger.py::Test_petstore::test_create_pet_in_petstore (call)
+Time: 2022-11-09 12:43:04.198708
+Request method: GET
+Request URL: https://petstore.swagger.io/v2/pet/9223372036854775807
+
+Response code: 404
+Response text: {"code":1,"type":"error","message":"Pet not found"}
+Response headers: {'Date': 'Wed, 09 Nov 2022 08:43:04 GMT', 'Content-Type': 'application/json', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'GET, POST, DELETE, PUT', 'Access-Control-Allow-Headers': 'Content-Type, api_key, Authorization', 'Server': 'Jetty(9.2.9.v20150224)'}
+Response cookies: {}
+
+-----
+
+-----
+Test: tests/test_petstore_swagger.py::Test_petstore::test_negative_pet_petstore (call)
+Time: 2022-11-09 12:43:04.894477
+Request method: POST
+Request URL: https://petstore.swagger.io/v2/pet
+
+Response code: 500
+Response text: {"code":500,"type":"unknown","message":"something bad happened"}
+Response headers: {'Date': 'Wed, 09 Nov 2022 08:43:05 GMT', 'Content-Type': 'application/json', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'GET, POST, DELETE, PUT', 'Access-Control-Allow-Headers': 'Content-Type, api_key, Authorization', 'Server': 'Jetty(9.2.9.v20150224)'}
+Response cookies: {}
+
+-----
+
+-----
+Test: tests/test_petstore_swagger.py::Test_petstore::test_negative_pet_petstore (call)
+Time: 2022-11-09 12:43:05.600189
+Request method: GET
+Request URL: https://petstore.swagger.io/v2/pet/0
+
+Response code: 404
+Response text: {"code":1,"type":"error","message":"Pet not found"}
+Response headers: {'Date': 'Wed, 09 Nov 2022 08:43:06 GMT', 'Content-Type': 'application/json', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'GET, POST, DELETE, PUT', 'Access-Control-Allow-Headers': 'Content-Type, api_key, Authorization', 'Server': 'Jetty(9.2.9.v20150224)'}
+Response cookies: {}
+
+-----
+
+-----
+Test: tests/test_petstore_swagger.py::Test_petstore::test_negative_pet_petstore (call)
+Time: 2022-11-09 12:43:06.297187
+Request method: PUT
+Request URL: https://petstore.swagger.io/v2/pet
+
+Response code: 500
+Response text: {"code":500,"type":"unknown","message":"something bad happened"}
+Response headers: {'Date': 'Wed, 09 Nov 2022 08:43:07 GMT', 'Content-Type': 'application/json', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'GET, POST, DELETE, PUT', 'Access-Control-Allow-Headers': 'Content-Type, api_key, Authorization', 'Server': 'Jetty(9.2.9.v20150224)'}
+Response cookies: {}
+
+-----
+
+-----
+Test: tests/test_petstore_swagger.py::Test_petstore::test_negative_pet_petstore (call)
+Time: 2022-11-09 12:43:07.034194
+Request method: DELETE
+Request URL: https://petstore.swagger.io/v2/pet/32
+
+Response code: 404
+Response text: 
+Response headers: {'Date': 'Wed, 09 Nov 2022 08:43:07 GMT', 'Content-Length': '0', 'Connection': 'keep-alive', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'GET, POST, DELETE, PUT', 'Access-Control-Allow-Headers': 'Content-Type, api_key, Authorization', 'Server': 'Jetty(9.2.9.v20150224)'}
+Response cookies: {}
+
+-----

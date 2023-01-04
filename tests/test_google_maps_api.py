@@ -5,7 +5,7 @@ from utilites.checking import Check
 """Создание, изменение и удаление новой локации"""
 
 
-class Test_create_place():
+class Test_create_place_class():
 
     def test_create_new_place(self):
 
